@@ -50,4 +50,5 @@ go run main.go serve
 
 ```bash
 ./docker-build.sh   # 默认构建 Linux 版本
+./docker-build.sh -k # 构建并保留旧镜像
 ```

@@ -17,6 +17,9 @@ rm -f pocketbase-starter.tar
 docker save -o pocketbase-starter.tar pocketbase-starter
 
 # 删除镜像
-# docker rmi pocketbase-starter
+# 如果传入了 -k 或 --keep 参数则保留镜像
+if [[ "$1" != "-k" && "$1" != "--keep" ]]; then
+    docker rmi pocketbase-starter
+fi
 
 

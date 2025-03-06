@@ -50,5 +50,6 @@ go run main.go serve
 4. Build image
 
 ```bash
-./docker-build.sh   # Default build Linux version
+./docker-build.sh    # Default build Linux version
+./docker-build.sh -k # Build and keep removed old image
 ```
