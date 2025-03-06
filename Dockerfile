@@ -3,7 +3,7 @@ FROM alpine:latest
 # 设置工作目录
 WORKDIR /app
 
-# 创建 /app/pb_data 文件夹
+# 创建 /app 文件夹
 RUN mkdir -p /app
 
 # 复制项目文件到工作目录

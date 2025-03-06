@@ -5,3 +5,11 @@ pocketbase-starter.tar
 main
 
 go.sum
+
+# Docker related
+.docker
+docker-compose.override.yml
+
+# Environment variables
+.env
+.env.*
