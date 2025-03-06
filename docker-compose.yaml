@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - "9900:9900"
     volumes:
       - ./pb_data:/app
     restart: unless-stopped
