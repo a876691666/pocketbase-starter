@@ -2,6 +2,8 @@
 
 这是一个基于 PocketBase 的启动项目模板,提供了开箱即用的基础配置和功能。
 
+[English](README.md) | 中文
+
 ## 主要功能
 
 ### 1. Docker 容器化部署

@@ -3,6 +3,8 @@
 This is a PocketBase starter project template that provides out-of-the-box basic
 configuration and functionality.
 
+English | [中文](README_zh.md)
+
 ## Main Features
 
 ### 1. Docker Containerized Deployment
