@@ -17,6 +17,6 @@ rm -f pocketbase-starter.tar
 docker save -o pocketbase-starter.tar pocketbase-starter
 
 # 删除镜像
-docker rmi pocketbase-starter
+# docker rmi pocketbase-starter
 
 

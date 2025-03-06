@@ -4,13 +4,15 @@ FROM alpine:latest
 WORKDIR /app
 
 # 创建 /app 文件夹
-RUN mkdir -p /app
+RUN mkdir -p /app/pb_data
+RUN mkdir -p /app/pb_public
 
 # 复制项目文件到工作目录
 COPY main ./
 
 # 设置数据卷
-VOLUME /app
+VOLUME /app/pb_data
+VOLUME /app/pb_public
 
 # 暴露端口
 EXPOSE 9900
