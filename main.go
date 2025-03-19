@@ -8,6 +8,7 @@ import (
 	"github.com/pocketbase/pocketbase/apis"
 	"github.com/pocketbase/pocketbase/core"
 
+	api "pb/api"
 	jobs "pb/core/jobs"
 	migrations "pb/core/migrations"
 )
@@ -16,6 +17,8 @@ func main() {
 	app := pocketbase.New()
 
 	migrations.Init(app)
+
+	api.Init(app)
 
 	jobs.Init(app)
 
