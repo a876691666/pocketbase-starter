@@ -21,7 +21,7 @@ English | [中文](README_zh.md)
   - ADMIN_EMAIL: Administrator email
   - ADMIN_PASSWORD: Administrator password
 - Default configuration:
-  - Email: admin@pocketbase-starter.com
+  - Email: admin@pb.com
   - Password: 0123456789
 - Automatically checks and creates admin account on startup
 
@@ -30,8 +30,8 @@ English | [中文](README_zh.md)
 1. Clone the project
 
 ```bash
-git clone https://github.com/a876691666/pocketbase-starter.git
-cd pocketbase-starter
+git clone https://github.com/a876691666/pb.git
+cd pb
 ```
 
 2. Run locally

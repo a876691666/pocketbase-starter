@@ -20,7 +20,7 @@
   - ADMIN_EMAIL: 管理员邮箱
   - ADMIN_PASSWORD: 管理员密码
 - 默认配置:
-  - 邮箱: admin@pocketbase-starter.com
+  - 邮箱: admin@pb.com
   - 密码: 0123456789
 - 启动时自动检查并创建管理员账户
 
@@ -29,8 +29,8 @@
 1. 克隆项目
 
 ```bash
-git clone https://github.com/a876691666/pocketbase-starter.git
-cd pocketbase-starter
+git clone https://github.com/a876691666/pb.git
+cd pb
 ```
 
 2. 本地运行

@@ -2,15 +2,13 @@ version: '3.8'
 
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: pb:latest
     ports:
       - "9900:9900"
     volumes:
-      - ./pb_data:/app/pb_data
-      - ./pb_public:/app/pb_public
+      - /data/pb/pb_data:/app/pb_data
+      - /data/pb/pb_public:/app/pb_public
     restart: unless-stopped
     environment:
-      - ADMIN_EMAIL=admin@pocketbase-starter.com
+      - ADMIN_EMAIL=admin@pb.com
       - ADMIN_PASSWORD=0123456789
