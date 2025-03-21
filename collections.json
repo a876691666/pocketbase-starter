@@ -125,7 +125,9 @@
     },
     "passwordAuth": {
       "enabled": true,
-      "identityFields": ["email"]
+      "identityFields": [
+        "email"
+      ]
     },
     "mfa": {
       "enabled": false,
@@ -268,7 +270,13 @@
         "id": "file376926767",
         "maxSelect": 1,
         "maxSize": 0,
-        "mimeTypes": ["image/jpeg", "image/png", "image/svg+xml", "image/gif", "image/webp"],
+        "mimeTypes": [
+          "image/jpeg",
+          "image/png",
+          "image/svg+xml",
+          "image/gif",
+          "image/webp"
+        ],
         "name": "avatar",
         "presentable": false,
         "protected": false,
@@ -323,7 +331,9 @@
     },
     "passwordAuth": {
       "enabled": true,
-      "identityFields": ["email"]
+      "identityFields": [
+        "email"
+      ]
     },
     "mfa": {
       "enabled": false,
@@ -836,7 +846,306 @@
         "type": "autodate"
       }
     ],
-    "indexes": ["CREATE UNIQUE INDEX `idx_config_name` ON `config` (name)"],
+    "indexes": [
+      "CREATE UNIQUE INDEX `idx_config_name` ON `config` (name)"
+    ],
+    "system": false
+  },
+  {
+    "id": "pbc_3090446165",
+    "listRule": null,
+    "viewRule": null,
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "name": "proxy",
+    "type": "base",
+    "fields": [
+      {
+        "autogeneratePattern": "[a-z0-9]{15}",
+        "hidden": false,
+        "id": "text3208210256",
+        "max": 15,
+        "min": 15,
+        "name": "id",
+        "pattern": "^[a-z0-9]+$",
+        "presentable": false,
+        "primaryKey": true,
+        "required": true,
+        "system": true,
+        "type": "text"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text1579384326",
+        "max": 0,
+        "min": 0,
+        "name": "name",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": true,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text3257165821",
+        "max": 0,
+        "min": 0,
+        "name": "listen",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text1181691900",
+        "max": 0,
+        "min": 0,
+        "name": "target",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "hidden": false,
+        "id": "json4223022061",
+        "maxSize": 0,
+        "name": "req_headers",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "json"
+      },
+      {
+        "hidden": false,
+        "id": "json3577748331",
+        "maxSize": 0,
+        "name": "res_headers",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "json"
+      },
+      {
+        "hidden": false,
+        "id": "bool1056335270",
+        "name": "https",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "bool"
+      },
+      {
+        "hidden": false,
+        "id": "autodate2990389176",
+        "name": "created",
+        "onCreate": true,
+        "onUpdate": false,
+        "presentable": false,
+        "system": false,
+        "type": "autodate"
+      },
+      {
+        "hidden": false,
+        "id": "autodate3332085495",
+        "name": "updated",
+        "onCreate": true,
+        "onUpdate": true,
+        "presentable": false,
+        "system": false,
+        "type": "autodate"
+      }
+    ],
+    "indexes": [
+      "CREATE UNIQUE INDEX `idx_j4Cormwxp6` ON `proxy` (`name`)",
+      "CREATE UNIQUE INDEX `idx_BuXupKa75E` ON `proxy` (`listen`)"
+    ],
+    "system": false
+  },
+  {
+    "id": "pbc_296302643",
+    "listRule": null,
+    "viewRule": null,
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "name": "proxy_log",
+    "type": "base",
+    "fields": [
+      {
+        "autogeneratePattern": "[a-z0-9]{15}",
+        "hidden": false,
+        "id": "text3208210256",
+        "max": 15,
+        "min": 15,
+        "name": "id",
+        "pattern": "^[a-z0-9]+$",
+        "presentable": false,
+        "primaryKey": true,
+        "required": true,
+        "system": true,
+        "type": "text"
+      },
+      {
+        "cascadeDelete": false,
+        "collectionId": "pbc_3090446165",
+        "hidden": false,
+        "id": "relation1936902590",
+        "maxSelect": 1,
+        "minSelect": 0,
+        "name": "proxy",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "relation"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text53591388",
+        "max": 0,
+        "min": 0,
+        "name": "client_ip",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text1582905952",
+        "max": 0,
+        "min": 0,
+        "name": "method",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text1181691900",
+        "max": 0,
+        "min": 0,
+        "name": "target",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "hidden": false,
+        "id": "number1326685452",
+        "max": null,
+        "min": null,
+        "name": "status_code",
+        "onlyInt": false,
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "number"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text1574812785",
+        "max": 0,
+        "min": 0,
+        "name": "error",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "hidden": false,
+        "id": "number2254405824",
+        "max": null,
+        "min": null,
+        "name": "duration",
+        "onlyInt": false,
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "number"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text4223022061",
+        "max": 0,
+        "min": 0,
+        "name": "req_headers",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text3577748331",
+        "max": 0,
+        "min": 0,
+        "name": "res_headers",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "hidden": false,
+        "id": "autodate2990389176",
+        "name": "created",
+        "onCreate": true,
+        "onUpdate": false,
+        "presentable": false,
+        "system": false,
+        "type": "autodate"
+      },
+      {
+        "hidden": false,
+        "id": "autodate3332085495",
+        "name": "updated",
+        "onCreate": true,
+        "onUpdate": true,
+        "presentable": false,
+        "system": false,
+        "type": "autodate"
+      }
+    ],
+    "indexes": [
+      "CREATE INDEX `idx_0Na6ZebJ6V` ON `proxy_log` (`client_ip`)",
+      "CREATE INDEX `idx_K6SiN0afs4` ON `proxy_log` (`method`)",
+      "CREATE INDEX `idx_V9pJtDmACP` ON `proxy_log` (`target`)",
+      "CREATE INDEX `idx_gDhPRPL5P9` ON `proxy_log` (`status_code`)",
+      "CREATE INDEX `idx_rp37YKZDxd` ON `proxy_log` (`proxy`)"
+    ],
     "system": false
   }
 ]

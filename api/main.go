@@ -1,6 +1,7 @@
 package api
 
 import (
+	"pb/api/proxy"
 	"pb/api/user"
 
 	"github.com/pocketbase/pocketbase"
@@ -8,4 +9,5 @@ import (
 
 func Init(app *pocketbase.PocketBase) {
 	user.Init(app)
+	proxy.Init(app)
 }
